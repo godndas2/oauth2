@@ -1,7 +1,7 @@
 package com.example.oauth2.security;
 
 public enum SocialType {
-    FACEBOOK("facebook");
+    //FACEBOOK("facebook");
     GOOGLE("google");
     KAKAO("kakao");
 
