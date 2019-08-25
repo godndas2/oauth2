@@ -13,4 +13,5 @@
 ## Google, Facebook, Kakao 로그인  
 - Google  
 google developers console에 접속해서 project를 생성해준다.  
-사용자인증정보 > OAuth 클라이언트 ID 만들기
+사용자인증정보 > OAuth 클라이언트 ID 만들기  
+## Front는 Thymeleaf
