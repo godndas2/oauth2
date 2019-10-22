@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 331153258024-lfu8v6i7m0emfrdf7retdsdlgpqa5foa.apps.googleusercontent.com
+            client-secret: fjYdo01MNhrzna4JF-3o8WTn
+          facebook:
+            client-id: 375579863367028
+            client-secret: ed43d831e5bcaaba99eb137453d1c7b8
+          github:
+            client-id : a8f83d7716d19a4845c2
+            client-secret: e194d124119032dc9f7d359d6a138cf5c4d4ae70
+
+security:
+  oauth2:
+    jwt:
+      signkey: halfdev!@$&
+
+custom:
+  oauth2:
+    kakao:
+      client-id: 877cf350333227a753e311bd4d5b5fe6
