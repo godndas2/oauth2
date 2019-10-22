@@ -18,7 +18,7 @@ public class OauthTwoController {
 
     @GetMapping("/loginSuccess")
     public String loginSuccess() {
-        return "hello";
+        return "loginSuccess";
     }
 
     @GetMapping("/loginFailure")

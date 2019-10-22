@@ -1,9 +1,10 @@
 package com.example.oauth2.security;
 
 public enum SocialType {
-    //FACEBOOK("facebook");
-    GOOGLE("google");
-    KAKAO("kakao");
+    FACEBOOK("facebook"),
+    GOOGLE("google"),
+    KAKAO("kakao"),
+    GITHUB("github");
 
     private final String ROLE_PREFIX = "ROLE_";
     private String name;
