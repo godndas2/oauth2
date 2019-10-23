@@ -10,7 +10,7 @@
 
 > 이러한 Authorization의 과정을 걸쳐 Client는 Resource Server의 특정 정보에 대한 접근 권한을 얻게 되어 해당 정보를 토대로 Resource Owner를 인증(Authentication)하여 Client의 서비스를 이용할 수 있게 합니다.
 
-## Google, Facebook, Kakao 로그인  
+## Google, Facebook, Kakao, Github, Microsoft SignIn  
 - Google  
 google developers console에 접속해서 project를 생성해준다.  
 사용자인증정보 > OAuth 클라이언트 ID 만들기  
