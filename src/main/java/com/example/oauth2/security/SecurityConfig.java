@@ -60,12 +60,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/kakao").hasAnyAuthority(SocialType.KAKAO.getRoleType())
                 .antMatchers("/facebook").hasAnyAuthority(SocialType.FACEBOOK.getRoleType())
                 .antMatchers("/github").hasAnyAuthority(SocialType.GITHUB.getRoleType())
+                .antMatchers("/azure").hasAnyAuthority(SocialType.MS.getRoleType())
                 .anyRequest().authenticated() // 인증된 사용자만 요청가능
                 .and()
                 .oauth2Login() // httpBasic () 및 formLogin () 요소 와 유사한 방식
 //                .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/loginSuccess")
+                .defaultSuccessUrl("http://dev.app.crms.life")
                 .failureUrl("/loginFailure")
                 .and()
                 .logout()
@@ -83,7 +84,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public ClientRegistrationRepository clientRegistrationRepository(OAuth2ClientProperties oAuth2ClientProperties
             , @Value("${custom.oauth2.kakao.client-id}") String kakaoClientId
-            , @Value("${custom.oauth2.kakao.client-secret") String kakaoClientSecret) {
+            , @Value("${custom.oauth2.kakao.client-secret") String kakaoClientSecret
+            , @Value("${spring.security.oauth2.client.registration.azure.client-id}") String azureClientId
+            , @Value("${spring.security.oauth2.client.registration.azure.client-secret}") String azureClientSecret
+    ) {
         List<ClientRegistration> registrations = oAuth2ClientProperties.getRegistration().keySet().stream()
                 .map(client -> getRegistration(oAuth2ClientProperties, client))
                 .filter(Objects::nonNull)
@@ -93,6 +97,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .clientId(kakaoClientId)
                 .clientSecret(kakaoClientSecret)
                 .jwkSetUri("temp")
+                .build());
+
+        registrations.add(CustomOAuth2Provider.MS.getBuilder("azure")
+                .clientId(azureClientId)
+                .clientSecret(azureClientSecret)
+                .jwkSetUri("https://login.microsoftonline.com/common/discovery/keys")
                 .build());
 
         return new InMemoryClientRegistrationRepository(registrations);

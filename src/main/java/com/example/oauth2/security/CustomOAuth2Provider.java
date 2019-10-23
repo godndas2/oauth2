@@ -18,7 +18,22 @@ public enum CustomOAuth2Provider {
             builder.clientName("Kakao");
             return  builder;
         }
+    },
+
+    MS {
+        @Override
+        public ClientRegistration.Builder getBuilder(String registrationId) {
+            ClientRegistration.Builder builder = getBuilder(registrationId, ClientAuthenticationMethod.POST, DEFAULT_LOGIN_REDIRECT_URL);
+            builder.scope("openid","https://graph.microsoft.com/Calendars.Read");
+            builder.authorizationUri("https://login.microsoftonline.com/common/oauth2/authorize");
+            builder.tokenUri("https://login.microsoftonline.com/common/oauth2/token");
+            builder.userInfoUri("https://login.microsoftonline.com/common/openid/userinfo");
+            builder.userNameAttributeName("sub");
+            builder.clientName("Azure");
+            return  builder;
+        }
     };
+
     private static final String DEFAULT_LOGIN_REDIRECT_URL = "{baseUrl}/login/oauth2/code/{registrationId}";
 
     protected  final ClientRegistration.Builder getBuilder(

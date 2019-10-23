@@ -15,6 +15,18 @@ spring:
           github:
             client-id : a8f83d7716d19a4845c2
             client-secret: e194d124119032dc9f7d359d6a138cf5c4d4ae70
+          azure:
+            client-id: bba52d67-3816-43a7-8d8f-69a668754a54
+            client-secret: z3u5EKOsk-VQQAqV4Tf5VtLg@zYwR/F/
+            authorization-grant-type: authorization_code
+            scope: openid, https://graph.microsoft.com/Calendars.Read
+            client-name: Azure
+            provider: azure
+            authorization-uri: https://login.microsoftonline.com/common/oauth2/authorize
+            token-uri: https://login.microsoftonline.com/common/oauth2/token
+            user-info-uri: https://login.microsoftonline.com/common/openid/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: https://login.microsoftonline.com/common/discovery/keys
 
 security:
   oauth2:
@@ -25,3 +37,8 @@ custom:
   oauth2:
     kakao:
       client-id: 877cf350333227a753e311bd4d5b5fe6
+
+azure:
+  activedirectory:
+    active-directory-groups: users
+    tenant-id: d630cdb0-fb53-41f8-ba22-03399ce5b046
