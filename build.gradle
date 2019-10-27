@@ -24,6 +24,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2:2.1.2.RELEASE'
     // https://mvnrepository.com/artifact/com.microsoft.azure/azure-active-directory-spring-boot-starter
     compile group: 'com.microsoft.azure', name: 'azure-active-directory-spring-boot-starter', version: '2.1.7'
     compileOnly 'org.projectlombok:lombok'
