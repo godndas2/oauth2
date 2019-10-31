@@ -8,7 +8,16 @@
 4) Client는 Resource Owner에게 Resource Server 로그인 창을 띄워줌  
 5) 만일 Resource Owner가 Client에게 Resource Server에 있는 자신의 정보에 접근을 허락하면 Resource Server는 Client에게 일련의 암호화된 코드를 제공하고 이 코드와 함께 해당 정보의 사용 등록을 했는지의 여부를 판단하는 Client ID와 Client Secret을 함께 보내 모든 것이 일치한다면 최종 접근 권한 부여의 암호인 Access Token을 발급하게 됩니다  
 
-> 이러한 Authorization의 과정을 걸쳐 Client는 Resource Server의 특정 정보에 대한 접근 권한을 얻게 되어 해당 정보를 토대로 Resource Owner를 인증(Authentication)하여 Client의 서비스를 이용할 수 있게 합니다.
+> 이러한 Authorization의 과정을 걸쳐 Client는 Resource Server의 특정 정보에 대한 접근 권한을 얻게 되어 해당 정보를 토대로 Resource Owner를 인증(Authentication)하여 Client의 서비스를 이용할 수 있게 합니다.  
+
+## SSL  
+- server.jks
+![ssl1](https://user-images.githubusercontent.com/34512538/67954120-b7482100-fc33-11e9-8f6e-1f932b4c7297.PNG)  
+- client.jks
+![ssl2](https://user-images.githubusercontent.com/34512538/67954121-b7e0b780-fc33-11e9-8f30-2cc23cedebbb.PNG)
+
+
+
 
 ## Google, Facebook, Kakao, Github, Microsoft SignIn  
 - Google  
