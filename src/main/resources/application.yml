@@ -1,9 +1,9 @@
 server:
   ssl:
-    key-store: C:/Users/HalfDev/keystore.p12
-    key-store-password: fjYdo01MNhrzna4JF-3o8WTn
-    keyStoreType: PKCS12
-    keyAlias: tomcat
+    key-store: classpath:server.jks
+    key-store-password: hhw0309010!
+    keyStoreType: jks
+    keyAlias: server_private
     enabled: true
   port: 8090
 
