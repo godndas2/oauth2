@@ -19,8 +19,9 @@
 
 
 
-## Google, Facebook, Kakao, Github, Microsoft SignIn  
-- Google  
-google developers console에 접속해서 project를 생성해준다.  
-사용자인증정보 > OAuth 클라이언트 ID 만들기  
-## Front는 Thymeleaf
+## Jwt
+- https://brunch.co.kr/@sbcoba/7  
+- https://security.stackexchange.com/questions/131514/oauth2-microservices-and-keep-me-logged-in-feature [remember me]  
+- https://github.com/szerhusenBC/jwt-spring-security-demo [backend oauth jwt tutorial]  
+- https://www.toptal.com/java/rest-security-with-jwt-spring-security-and-java [security jwt using]
+## Front는 Thymeleaf or Vue.js
