@@ -83,5 +83,4 @@ public class Oauth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
 //        clients.withClientDetails(clientDetailsService);
     }
 
-    
 }
