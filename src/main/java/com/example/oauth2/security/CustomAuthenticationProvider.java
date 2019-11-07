@@ -1,5 +1,7 @@
 package com.example.oauth2.security;
 
+import com.example.oauth2.model.User;
+import com.example.oauth2.repository.UserJpaRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationProvider;

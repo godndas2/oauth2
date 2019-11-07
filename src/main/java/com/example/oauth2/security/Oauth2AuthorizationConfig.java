@@ -34,18 +34,14 @@ public class Oauth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     private final UserDetailService customUserDetailService;
     private final ClientDetailsService clientDetailsService;
 
-    @Value("{security.oauth2.jwt.signkey}")
-    private String signKey;
+//    @Value("{security.oauth2.jwt.signkey}")
+//    private String signKey;
 
     @Bean
     public TokenStore tokenStore() {
         return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
-    /**
-     *
-     *
-     */
     @Bean
     @Primary
     public DefaultTokenServices tokenServices() {

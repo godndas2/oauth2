@@ -1,5 +1,6 @@
-package com.example.oauth2.security;
+package com.example.oauth2.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -38,6 +40,11 @@ public class User implements UserDetails {
 
     @Column(length = 100)
     private String provider;
+
+    @JsonIgnore
+    @Column(name = "ACTIVATED")
+    @NotNull
+    private boolean activated;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
