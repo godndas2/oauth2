@@ -20,7 +20,7 @@
 
 
 ## Jwt
-- jwt 어떻게 관리할 것인가
+- jwt 어떻게 관리할 것인가 - Redis
 - https://brunch.co.kr/@sbcoba/7  
 - https://security.stackexchange.com/questions/131514/oauth2-microservices-and-keep-me-logged-in-feature [remember me]  
 - https://github.com/szerhusenBC/jwt-spring-security-demo [backend oauth jwt tutorial]  
