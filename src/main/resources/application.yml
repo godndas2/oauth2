@@ -1,7 +1,7 @@
 server:
   ssl:
     key-store: classpath:server.jks
-    key-store-password: hhw0309010!
+    key-store-password: 
     keyStoreType: jks
     keyAlias: server_private
     enabled: true
